@@ -1,0 +1,252 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Belanosima', sans-serif;
+  font-weight: regular;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: regular;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+ /* это надпись сверху Привет */
+.header {
+  width: 100%;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  color: brown;
+}
+
+.header_logo {
+  color: inherit;
+  text-decoration: none;
+}
+
+.I_am {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.hero_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px,1fr));
+  grid-gap: 20px;
+}
+
+.hero_about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* 100 это было в моеём цсс */
+  /* margin-top: -100px; */
+}
+
+.hero_title {
+  margin-bottom: 20px;
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+.hero_subtatle {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.hero_description {
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.links {
+  display: flex;
+}
+
+.hero_link1 { color: #005885;
+  margin-right: 15px;
+  font-size: 33px;
+  transition: color 0.3s;}
+.hero_link2 { color: #0fbf2a;
+  margin-right: 15px;
+  font-size: 33px;
+  transition: color 0.3s;}
+.hero_link3 { color: #5287bf;
+  margin-right: 15px;
+  font-size: 33px;
+  transition: color 0.3s;}
+.hero_link4 { color: #000;
+  margin-right: 15px;
+  font-size: 33px;
+  transition: color 0.3s;}
+.hero_link5 { color: #f2a60c;
+  margin-right: 15px;
+  font-size: 33px;
+  transition: color 0.3s;}
+
+.hero_link1:hover { 
+    color: hsl(199, 100%, 50%);
+    transform: scale(1.4);}
+.hero_link2:hover { 
+    color: #00ff1e;
+    transform: scale(1.4);}
+.hero_link3:hover { 
+    color: #007bff;
+    transform: scale(1.4);}
+.hero_link4:hover { 
+    color: #ff0000;
+    transform: scale(1.4);}
+.hero_link5:hover { 
+    color: #ff9900;
+    transform: scale(1.4);}
+
+.menu {
+  display: flex;
+  margin-top:20px; 
+  list-style: none;   
+}
+
+.btn {
+  cursor: pointer;
+  margin-right: 10px;
+  font-family: 'Marck Script', sans-serif;
+  font-weight: 400;
+  width: 100px;
+  height: 50px;
+  font-size: 17px;
+  border: 0px;
+  justify-content: center;
+  text-decoration: none; 
+  background:rgb(29, 6, 91); 
+  color:#fff; 
+  padding:5px; 
+  border-radius:10px; 
+  transition: all 0.3s 0.01s ease;   
+}
+
+.btn:hover {
+  background:#0289ff;
+}
+
+
+.hero_box {
+  max-width: 500px;
+  justify-self: center;
+  overflow: hidden;
+  border: 10px solid #fff;
+  animation: ava-animate 5s infinite alternate;
+  box-shadow: 0 0 0 1px #ccc,
+  0 -20px 20px -2px #FBC16A,
+  20px 0 20px -2px #6BFA76,
+  0 20px 20px -2px #6BA5FA,
+  -20px 0 20px -2px #F4F171;
+} 
+
+.hero_box_img  {
+  animation: ava-bg 3s infinite alternate;
+}
+
+#floatTip {
+  position: absolute; width: 250px; display: none; 
+  border: 1px solid #000; padding: 4px;
+  font-family: sans-serif; font-size: 9pt;
+  color: #000000; background: #ffe5ff;
+ }
+
+
+@media screen and (max-width: 978px) {
+  .I_am {
+    padding-top: 30px;
+  }
+
+  .hero_container {
+    grid-row-gap: 20px;
+  }
+
+  .hero_title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .hero_subtitle {
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .hero_description {
+    font-size: 14px;
+  }
+
+  .hero_about {
+    text-align: center;
+  }
+
+  .hero_links {
+    justify-content: center;
+  }
+
+  .menu {
+    justify-content: center;
+  }
+
+
+
+  .hero_box {
+    max-width: 350px;
+    justify-self: center;
+  }
+}
+
+@keyframes ava-animate {
+  0% {
+    /* border-radius: 67% 33% 27% 73% / 46% 73% 27% 54%; */
+    border-radius: 67% 33% 27% 73% / 46% 23% 27% 10%;
+  } 
+
+  25% {
+    border-radius: 67% 33% 27% 73% / 46% 26% 74% 54%;
+  }
+
+  50% {
+    border-radius: 16% 84% 27% 73% / 46% 26% 74% 54%;
+  }
+
+  75% {
+    border-radius: 16% 84% 27% 73% / 82% 26% 74% 18%; 
+  }
+  
+  100% {
+    border-radius: 16% 84% 58% 42% / 29% 26% 74% 71%; 
+  }
+}
+
+@keyframes ava-bg {
+  from {
+    backdrop-filter: hue-rotate(0);
+  }
+
+  to {
+    backdrop-filter: hue-rotate(90deg);
+  }
+}
